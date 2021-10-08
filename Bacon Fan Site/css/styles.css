@@ -9,9 +9,9 @@ p{
   font-family: cursive;
 }
 
-/* img{
-    background-color:red;
-  }  */
+img:hover{
+    background-color:gold;
+  }
 
 /*******************************CLASS SELECTOR********************************/
 .bacon{
@@ -20,4 +20,12 @@ p{
 
 .broccoli{
   background-color:green;
+}
+
+.circular{
+  border-radius: 100%;
+}
+/*******************************ID   SELECTOR********************************/
+#heading{
+  color: blue;
 }
