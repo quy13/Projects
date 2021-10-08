@@ -1,11 +1,23 @@
+/*******************************TAG SELECTOR********************************/
 h1{
   color: red;
   font-size: 200px;
 }
+
 p{
   color: orange;
   font-family: cursive;
 }
-img{
+
+/* img{
     background-color:red;
+  }  */
+
+/*******************************CLASS SELECTOR********************************/
+.bacon{
+  background-color:red;
+}
+
+.broccoli{
+  background-color:green;
 }
