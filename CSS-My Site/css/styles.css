@@ -2,10 +2,20 @@ body{
   background-color: white;
   margin: 0;
 }
-div{
+.top-container{
   color: #082032;
   background-color: #F0A500;
 
+}
+.middle-container{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.bottom_container{
+  width: 200px;
+  height: 200px;
+  background-color: blue;
 }
 h1{
   margin-top: 0;
