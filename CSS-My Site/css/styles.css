@@ -1,10 +1,13 @@
 body{
   background-color: white;
+  text-align: center;
   margin: 0;
 }
 .top-container{
   color: #082032;
   background-color: #F0A500;
+  position: relative;
+  padding-top: 100px;
 
 }
 .middle-container{
@@ -22,4 +25,14 @@ h1{
 }
 span{
   text-decoration: underline;
+}
+.top-cloud{
+  position: absolute;
+  right: 330px;
+  top: 50px;
+}
+.bottom-cloud{
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
 }
