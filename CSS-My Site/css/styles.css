@@ -38,12 +38,22 @@ span {
 }
 
 img{
-  margin-top: 10px;
+
 }
 
-.image{
-  width: 200px;
-  height: 200px;
+.profile-image{
+  width: 10%;
+  margin: 10px;
+}
+.android-image{
+width: 20%;
+ float: left;
+ margin-right: 30px;
+}
+.chili-image{
+ width: 20%;
+ float: right;
+ margin-left: 30px;
 }
 
 .top-container {
@@ -60,6 +70,14 @@ img{
 .bottom_container {
 
 
+}
+
+.skill-row{
+  margin: 100px auto;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+  overflow: auto;
 }
 
 .top-cloud {
