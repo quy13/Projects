@@ -2,7 +2,7 @@ body {
   background-color: white;
   text-align: center;
   margin: 0;
-  font-family: Merriweather, serif;
+  font-family: Merriweather;
 }
 
 h1 {
@@ -22,23 +22,25 @@ span {
   text-decoration: underline;
 }
 
+img{
+  margin-top: 10px;
+}
+
 .top-container {
   color: #082032;
-  background-color: #F0A500;
+  background-color: #FCFFA6;
   position: relative;
   padding-top: 100px;
+  font-weight: 900;
 }
 
 .middle-container {
-  width: 200px;
-  height: 200px;
-  background-color: red;
+
 }
 
 .bottom_container {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
+
+
 }
 
 .top-cloud {
