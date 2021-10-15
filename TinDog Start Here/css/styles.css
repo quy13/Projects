@@ -1,14 +1,87 @@
+body{
+  font-family:"Montserrat";
+}
+
 h1 {
-  font-family:'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-family:"Montserrat", sans-serif;
+  font-size: 3.5rem;
   line-height: 1.5;
   font-weight: 900;
 }
 
+.h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+
+.p{
+  color: #8f8f8f;
+}
+
 #title{
   background-color:  #ff4c68;
+  color: #fff;
+  overflow: hidden;
 }
+
+/* Navigation Bar */
+
+.navbar{
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand{
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+}
+
+ /* Download Button */
+ .download-btn{
+   margin: 5% 3% 5% 0;
+ }
+
+/* Title Image */
+.title-img{
+  width: 60%;
+  transform: rotate(25deg);
+}
+
+/* Feature Section */
+#features{
+ padding: 10%;
+}
+
+.feature-column{
+ text-align: center;
+ padding-bottom: 10%;
+}
+
+.feature-icons{
+  color: #ef8172;
+}
+
+.feature-icons:hover{
+  color: #ff4c68;
+}
+
+
 
 .container-fluid{
   padding: 3% 15%;
+}
+
+.top-container{
+   /* height:  100vh; */
+/* Use vh (viewport height), instead of rem so it works with different screen sizes.  */
+   /* overflow: hidden; */
 }
