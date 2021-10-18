@@ -50,6 +50,10 @@ h1 {
    margin: 5% 3% 5% 0;
  }
 
+ .download-icon{
+   margin-right: 10px;
+ }
+
 /* Title Image */
 .title-img{
   width: 60%;
