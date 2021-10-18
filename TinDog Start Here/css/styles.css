@@ -16,14 +16,15 @@ h2{
   line-height: 1.5;
 }
 
-.h3{
+h3{
   font-size: 1.5rem;
   font-weight: 700;
   padding-top: 1rem;
 }
 
-.p{
+p{
   color: #8f8f8f;
+  font-weight: 500;
 }
 
 #title{
@@ -62,14 +63,24 @@ h2{
  }
 
 /* Title Image */
+.img-container{
+  position: relative;
+}
+
 .title-img{
-  width: 60%;
+  position: absolute;
+  /* width: 60%; */
+  width: 224px;
   transform: rotate(25deg);
+  top: 8%;
+  right: 25%;
+  z-index: -1;
 }
 
 /* Feature Section */
 #features{
  padding: 10% 10% 0 10%;
+ background-color: #ffff;
 }
 
 .feature-column{
@@ -103,6 +114,7 @@ h2{
   padding: 7% 15%;
 }
 
+/* Press Section */
 #press{
   background-color: #ef8172;
   text-align: center;
@@ -114,12 +126,30 @@ h2{
   margin: 20px 20px 50px;
 }
 
+/* pricing section */
+#pricing{
+  text-align: center;
+  padding : 100px;
+}
+
+.pricing-column{
+  padding: 3% 2%;
+}
+
 .container-fluid{
   padding: 3% 15%;
 }
 
 .top-container{
    /* height:  100vh; */
-/* Use vh (viewport height), instead of rem so it works with different screen sizes.  */
    /* overflow: hidden; */
+   /* Use vh (viewport height), instead of rem so it works with different screen sizes.  */
+}
+
+
+/* Hide div element when screen size is smaller than a specific size */
+@media only screen and (max-width: 1280px) {
+    .title-img {
+        display: none;
+    }
 }
