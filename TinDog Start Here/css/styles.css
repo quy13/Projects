@@ -30,7 +30,7 @@ p{
 #title{
   background-color:  #ff4c68;
   color: #fff;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Navigation Bar */
@@ -70,17 +70,17 @@ p{
 .title-img{
   position: absolute;
   /* width: 60%; */
-  width: 224px;
+  width: 250px;
   transform: rotate(25deg);
   top: 8%;
   right: 25%;
-  z-index: -1;
 }
 
 /* Feature Section */
 #features{
  padding: 10% 10% 0 10%;
  background-color: #ffff;
+ position: relative;
 }
 
 .feature-column{
