@@ -55,7 +55,7 @@ p{
 
  /* Download Button */
  .download-btn{
-   margin: 5% 5% 5% 0;
+   margin: 5% 3% 5% 0;
  }
 
  .download-icon{
@@ -142,24 +142,25 @@ p{
   background-color: #ff4c68;
   color: #fff;
   text-align: center;
-  padding: 5%;
+  padding: 5% 15%;
 }
 .cta-title{
   font-size: 3rem;
   font-weight: 900;
+  line-height: 1.5;
 }
-.cta-download-btn{
+/* .cta-download-btn{
   margin: 3% 1%;
-}
+} */
 
 /* footer section */
 #footer{
   background-color: #fff;
   text-align: center;
-  padding: 5%;
+  padding: 5% 15%;
 }
 .footer-icons{
-  margin: 2% 1%;
+  margin: 20px 10px;
 }
 
 
@@ -183,7 +184,7 @@ p{
 } */
 
 
-/* will center all title elements & rotate title-imge to normal */
+/* will center all title elements & rotate title-image to normal */
 @media (max-width: 1280px){
   .title-img {
       position: static;
