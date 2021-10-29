@@ -61,10 +61,14 @@ function makeSound(key){
 function buttonAnimation(currentKey){
 
   var activeButton = document.querySelector("." + currentKey);
+  if(!activeButton){
+    return;
+  }else{
+    activeButton.classList.toggle("pressed");
 
-  activeButton.classList.toggle("pressed");
+    setTimeout(function() {
+      activeButton.classList.remove("pressed");
+    }, 100);    
+  }
 
-  setTimeout(function() {
-    activeButton.classList.remove("pressed");
-  }, 100);
 }
