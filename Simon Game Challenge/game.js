@@ -3,7 +3,8 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 var userClickedPattern = [];
 var gamePattern = [];
-
+var started = false;
+var level = 0;
 
 function nextSequence() {
   //generate a random int number from 0-3 range
@@ -17,6 +18,11 @@ function nextSequence() {
 
   playSound(randomChosenColor);
 
+  // increase the level by 1 every time nextSequence() is called.
+  level++;
+  // update the h1 with change in the value of level.
+  $("#level-title").text("Level "+level);
+
 }
 
 //sounds
@@ -26,23 +32,26 @@ function playSound(name){
   audio.play();
 }
 
+//click animation
 function animatePress(currentColor){
-  $("."+currentColor).addClass("pressed");
+  $("#"+currentColor).addClass("pressed");
   setTimeout(function(){
-
-    $("."+currentColor).removeClass("pressed");
-
+    $("#"+currentColor).removeClass("pressed");
   }, 100);
 }
 
-//detect keyboard press
+//detect keyboard press - begin the games
 $(document).on("keypress",function(event) {
 
-  nextSequence();
+  // only activate onces
+ if(!started){
+   nextSequence();
+   started = true;
+ }
 
 });
 
-//detect moouse click
+//detect mouse click
 $(".btn").on("click",function() {
 
   // get the color of the button that user click
@@ -51,6 +60,5 @@ $(".btn").on("click",function() {
   playSound(userChosenColor);
   animatePress(userChosenColor)
   console.log(userClickedPattern);
-});
 
-nextSequence();
+});
