@@ -1,7 +1,9 @@
 // alert("Hello");
 
 var buttonColors = ["red", "blue", "green", "yellow"];
-var gamePattern  = [];
+var userClickedPattern = [];
+var gamePattern = [];
+
 
 function nextSequence() {
   //generate a random int number from 0-3 range
@@ -10,37 +12,28 @@ function nextSequence() {
   var randomChosenColor = buttonColors[randomNumber];
   //put the color into gamePattern array
   gamePattern.push(randomChosenColor);
-}
 
-function playSound(color) {
+  // animations
+  $("#"+randomChosenColor).fadeOut(100).fadeIn(100)
   // will play sound corresponding to the color
-  switch (color) {
-    case "red":
-    var red = new Audio('sounds/red.mp3');
-    red.play();
-      break;
-    case "blue":
-    var blue = new Audio('sounds/blue.mp3');
-    blue.play();
-      break;
-    case "green":
-    var green = new Audio('sounds/green.mp3');
-    green.play();
-      break;
-    case "yellow":
-    var yellow = new Audio('sounds/yellow.mp3');
-    yellow.play();
-      break;
-    default:console.log(color);
-
-  }
-
+  var audio = new Audio("sounds/"+randomChosenColor+".mp3");
+  audio.play();
 }
 
-nextSequence();
+//detect keyboard press
+$(document).on("keypress",function() {
 
-$("#" + gamePattern[0]).fadeOut(100).fadeIn(100).click(function() {
-
-  playSound(gamePattern[0]);
+  nextSequence();
 
 });
+//detect moouse click
+$(".btn").on("click",function() {
+
+  // get the color of the button that user click
+  var userChosenColor = $(this).attr("id");
+  userClickedPattern.push(userChosenColor);
+  console.log(userClickedPattern);
+
+});
+
+nextSequence();
