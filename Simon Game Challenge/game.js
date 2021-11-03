@@ -29,6 +29,12 @@ function nextSequence() {
 
 }
 
+function startOver(){
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
+
 function checkAnswer(lastColor) {
 
   // logging user & game array
@@ -60,6 +66,8 @@ function checkAnswer(lastColor) {
     setTimeout(function () { $("body").removeClass("game-over"); },100);
 
     $("h1").text("Game Over, Press Any Key to Restart");
+
+    startOver();
   }
 
 }
