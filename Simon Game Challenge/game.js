@@ -53,6 +53,13 @@ function checkAnswer(lastColor) {
     console.log("Incorrect!");
     // reset userClickedPattern array if wrong
     userClickedPattern = [];
+
+    playSound("wrong");
+
+    $("body").addClass("game-over")
+    setTimeout(function () { $("body").removeClass("game-over"); },100);
+
+    $("h1").text("Game Over, Press Any Key to Restart");
   }
 
 }
