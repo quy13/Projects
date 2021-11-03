@@ -29,13 +29,13 @@ function nextSequence() {
 
 }
 
-function startOver(){
+function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
 }
 
-function checkAnswer(lastColor) {
+function checkAnswer(lastColor, userColor) {
 
   // logging user & game array
   console.log(`userTotal [${userClickedPattern.length - 1}] ${userClickedPattern}`);
@@ -43,13 +43,15 @@ function checkAnswer(lastColor) {
 
   // check user answer with the game
   if (userClickedPattern[lastColor] === gamePattern[lastColor]) {
-
+    playSound(userColor);
     // check if the user finish their answer sequence
     if (userClickedPattern.length === gamePattern.length) {
       console.log("Correct!");
+      $(".respond").text("Correct")
 
       //will call nextSequence after 1 second : 1000 millisecond delay
       setTimeout(function() {
+        $(".respond").html("&nbsp;")
         nextSequence();
       }, 1000)
     }
@@ -57,16 +59,16 @@ function checkAnswer(lastColor) {
   } else {
 
     console.log("Incorrect!");
-    // reset userClickedPattern array if wrong
-    userClickedPattern = [];
-
     playSound("wrong");
-
+    $(".respond").text("Incorrect")
     $("body").addClass("game-over")
-    setTimeout(function () { $("body").removeClass("game-over"); },100);
 
-    $("h1").text("Game Over, Press Any Key to Restart");
+    setTimeout(function() {
+      $("body").removeClass("game-over");
+      $(".respond").html("&nbsp;")
+    }, 400);
 
+    $("#level-title").text("Game Over, Press Any Key to Restart");
     startOver();
   }
 
@@ -109,14 +111,13 @@ $(".btn").on("click", function() {
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
 
-  playSound(userChosenColor);
   animatePress(userChosenColor)
   // console.log(userClickedPattern);
 
   // Call checkAnswer() after a user has clicked and chosen their answer,
   // passing in the index of the last answer in the user's sequence.
   // make the length begin at 0(start of array)
-  checkAnswer(userClickedPattern.length - 1);
+  checkAnswer(userClickedPattern.length - 1,userChosenColor);
 
 
 });
